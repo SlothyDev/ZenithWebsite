@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1f74a22fb6c73e77f6915b5f13720aa9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1f74a22fb6c73e77f6915b5f13720aa9" ></div>
+        
+</body>
+<script>    
+    
+            var map_1f74a22fb6c73e77f6915b5f13720aa9 = L.map(
+                "map_1f74a22fb6c73e77f6915b5f13720aa9",
+                {
+                    center: [43.44489456666667, -80.38121159999999],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_baefb8d7cd006c2fd9ff61d51bbc3deb = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1f74a22fb6c73e77f6915b5f13720aa9);
+        
+    
+            var marker_cluster_4cd6677866dfa500143f6613973a95ab = L.markerClusterGroup(
+                {}
+            );
+            map_1f74a22fb6c73e77f6915b5f13720aa9.addLayer(marker_cluster_4cd6677866dfa500143f6613973a95ab);
+        
+    
+            var marker_227f175419f0ae8d7a16c81490b86008 = L.marker(
+                [43.5070929, -80.5255674],
+                {}
+            ).addTo(marker_cluster_4cd6677866dfa500143f6613973a95ab);
+        
+    
+        var popup_ec4abcf315f540d89cab7ab73cc9b02a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6134cd6312ac01d2db0f411c5476bf04 = $(`<div id="html_6134cd6312ac01d2db0f411c5476bf04" style="width: 100.0%; height: 100.0%;">120 Northfield Drive East Waterloo ON</div>`)[0];
+            popup_ec4abcf315f540d89cab7ab73cc9b02a.setContent(html_6134cd6312ac01d2db0f411c5476bf04);
+        
+
+        marker_227f175419f0ae8d7a16c81490b86008.bindPopup(popup_ec4abcf315f540d89cab7ab73cc9b02a)
+        ;
+
+        
+    
+    
+            marker_227f175419f0ae8d7a16c81490b86008.bindTooltip(
+                `<div>
+                     120 Northfield Drive East Waterloo ON
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d5536dfb5c271baa187c1b0ba9726672 = L.marker(
+                [43.41211930000001, -80.2867474],
+                {}
+            ).addTo(marker_cluster_4cd6677866dfa500143f6613973a95ab);
+        
+    
+        var popup_dfb0b69b71e103cf64aaffa2cced0b1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c869c456316570bb5735dbd3193c9ad6 = $(`<div id="html_c869c456316570bb5735dbd3193c9ad6" style="width: 100.0%; height: 100.0%;">475 Thompson Dr Cambridge ON</div>`)[0];
+            popup_dfb0b69b71e103cf64aaffa2cced0b1a.setContent(html_c869c456316570bb5735dbd3193c9ad6);
+        
+
+        marker_d5536dfb5c271baa187c1b0ba9726672.bindPopup(popup_dfb0b69b71e103cf64aaffa2cced0b1a)
+        ;
+
+        
+    
+    
+            marker_d5536dfb5c271baa187c1b0ba9726672.bindTooltip(
+                `<div>
+                     475 Thompson Dr Cambridge ON
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d2593764ccc5d88fd34347a7bcb21757 = L.marker(
+                [43.4154715, -80.33131999999999],
+                {}
+            ).addTo(marker_cluster_4cd6677866dfa500143f6613973a95ab);
+        
+    
+        var popup_4c21133c188dc1906c814a37ad37796e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aeaa6586b75a7ed5dbb41ed5f6c3e857 = $(`<div id="html_aeaa6586b75a7ed5dbb41ed5f6c3e857" style="width: 100.0%; height: 100.0%;">605 Beaverdale Road Cambridge ON</div>`)[0];
+            popup_4c21133c188dc1906c814a37ad37796e.setContent(html_aeaa6586b75a7ed5dbb41ed5f6c3e857);
+        
+
+        marker_d2593764ccc5d88fd34347a7bcb21757.bindPopup(popup_4c21133c188dc1906c814a37ad37796e)
+        ;
+
+        
+    
+    
+            marker_d2593764ccc5d88fd34347a7bcb21757.bindTooltip(
+                `<div>
+                     605 Beaverdale Road Cambridge ON
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
