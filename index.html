@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
 </head>
 <body>
     <! --- Header ---- >
@@ -23,7 +24,7 @@
                     <li><a href="#About">ABOUT</a></li>
                     <li><a href="#Pricing">PRICING</a></li>
                     <li><a href="#CONTACT">CONTACT</a></li>
-                    <li><a href="sign-up.html">SIGN IN</a></li>
+                    <li><a href="sign-up.html#linkLogin">SIGN IN</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -152,6 +153,12 @@
     <! --- JS Function ---- >
 
     <script>
+        function SignIn(){
+
+        }
+    </script>
+
+    <script>
         var navLinks = document.getElementById("navLinks");
         function showMenu(){
         navLinks.style.right = "0";
@@ -160,6 +167,5 @@
         navLinks.style.right = "-200";
         }
     </script>
-
 </body>
 </html>

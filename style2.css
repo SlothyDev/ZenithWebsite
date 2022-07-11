@@ -8,7 +8,7 @@ html {
 }
 body{
     --color-primary: #fc9700cc;
-    --color-primary-dark: #bd7203cc;
+    --color-primary-dark: #f09206cc;
     --color-secondary: #252c6a;
     --color-error: #cc3333;
     --color-success: #4bb544;
@@ -19,7 +19,7 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(images/banner.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(images/banner.jpg);
     background-size: cover;
 }
 img {
@@ -123,6 +123,9 @@ h1{
     outline: none;
     cursor: pointer;
     background: var(--color-primary);
+}
+.form--hidden{
+    display:none;
 }
 .form__button:hover{
     background: var(--color-primary-dark);
