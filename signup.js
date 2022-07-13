@@ -1,3 +1,4 @@
+
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector(".form__message");
 
@@ -31,8 +32,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
-        //Perform LogIn
-        setFormMessage(loginForm,"error","Invalid username/password combination.")
+        var un = loginForm.UserEmail.value;
+        var pw = loginForm.Password.value;
+        un = un.toString();
+        pw = pw.toString();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("post", "https://login-cd7w7hrhmq-uc.a.run.app/", true);
+        xmlhttp.setRequestHeader('type', 'login');
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                var json = JSON.parse(xmlhttp.responseText);
+                console.log(json['0']);
+                if('0' in json){
+                    console.log(`Signed in as ${json['0']['username']}`);
+                    setFormMessage(loginForm, "success", `Signed in as ${json['0']['username']}`)
+                }
+                else{
+                    console.log('Failed login');
+                    setFormMessage(loginForm, "error", `Incorrect username/password combination.`)
+                }
+            }
+        };
+        if (un.includes('@')){
+            var data = JSON.stringify({'email': un, "password": pw});
+            xmlhttp.send(data);
+        }
+        else{
+            var data = JSON.stringify({'username': un, "password": pw});
+            xmlhttp.send(data);
+        }
+    });
+    createAccountForm.addEventListener("submit", e => {
+        e.preventDefault();
+        var name = createAccountForm.signupUsername.value;
+        var eml = createAccountForm.signupEmail.value;
+        var pw = createAccountForm.signupPassword.value;
+        var cf = createAccountForm.signupConfirm.value;
+        name = name.toString();
+        eml = eml.toString();
+        cf = cf.toString();
+        pw = pw.toString();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("post", "https://login-cd7w7hrhmq-uc.a.run.app/", true);
+        xmlhttp.setRequestHeader('type', 'signup');
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                console.log(xmlhttp.responseText);
+            }
+            else{
+                console.log('error');
+            }
+        };
+        var data = JSON.stringify({'username': name, 'email': eml, "password": pw});
+        xmlhttp.send(data);
     });
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
